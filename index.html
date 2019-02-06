@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+</head>
+
+<body id="body">
+
+
+    <container>
+    
+        <div id= "header" class="jumbotron">
+            <h1 id="jumboDisplay" class="display-5">Train Schedule</h1>
+        </div>
+
+        <table id= "trainTimes" class="table table-dark">
+            <thead id="scheduleHead">
+              <tr>
+                <th id="headerText" scope="col">Train Name</th>
+                <th id="headerText" scope="col">Destination</th>
+                <th id="headerText" scope="col">Frequency (min)</th>
+                <th id="headerText" scope="col">Next Arrival</th>
+                <th id="headerText" scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+        <div id= "inputField"class="jumbotron">
+            
+            <h1 id="addTrainText" class="display-4">Add Train</h1>
+            
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Train Name</span>
+                </div>
+                <input  id="trainNameBox" type="text" class="form-control" placeholder="Train Name" aria-label="Train Name" aria-describedby="addon-wrapping">
+            </div>
+
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Destination</span>
+                </div>
+                <input id="destinationBox" type="text" class="form-control" placeholder="Destination" aria-label="Destination" aria-describedby="addon-wrapping">
+            </div>
+
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">First Train Time(HH:mm military time)</span>
+                </div>
+                <input id="firstTrainTimeBox" type="text" class="form-control" placeholder="First Train Time (HH:mm military time)" aria-label="First Train Time" aria-describedby="addon-wrapping">
+            </div>
+
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Frequency(mins)</span>
+                </div>
+                <input id="frequencyBox" type="text" class="form-control" placeholder="Frequency (mins)" aria-label="Frequency" aria-describedby="addon-wrapping">
+            </div>
+
+            <button onclick="addTrain()" id ="submitButton" type="button" class="btn btn-secondary btn-lg">Submit</button>
+
+        </div>
+    
+    
+    </container>
+
+
+</body>
+
+
+
+</html>
